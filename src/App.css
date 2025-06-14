@@ -1,0 +1,134 @@
+.app {
+  min-height: 100vh; /* Extended height for scrolling effect */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background-color: #000; /* Black background for matrix effect */
+  position: relative;
+  overflow-x: hidden;
+}
+
+.info-panel {
+  background: rgba(0, 0, 0, 0.85);
+  border: 1px solid #0F4;
+  border-radius: 4px;
+  box-shadow: 
+    0 0 20px rgba(0, 255, 68, 0.3),
+    0 4px 6px -1px rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  max-width: 66vw;
+  margin: 0 auto;
+  position: relative;
+  z-index: 100;
+  backdrop-filter: blur(2px);
+  transition: transform 0.1s ease-out;
+}
+
+.info-panel h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #0F4;
+  margin: 0 0 0.5rem 0;
+  text-align: left;
+  text-shadow: 0 0 10px rgba(0, 255, 68, 0.5);
+}
+
+.info-panel h2 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #0A3;
+  margin: 0 0 2rem 0;
+  text-align: left;
+  text-shadow: 0 0 5px rgba(0, 255, 68, 0.3);
+}
+
+.content-section {
+  margin-bottom: 1.5rem;
+}
+
+.content-section:last-child {
+  margin-bottom: 0;
+}
+
+.content-section h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #0F4;
+  margin: 0 0 0.75rem 0;
+  border-bottom: 1px solid #0A3;
+  padding-bottom: 0.5rem;
+  text-shadow: 0 0 5px rgba(0, 255, 68, 0.3);
+}
+
+.content-section p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #0C5;
+  margin: 0;
+  text-shadow: 0 0 3px rgba(0, 255, 68, 0.2);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .app {
+    padding: 0.5rem;
+  }
+  
+  .info-panel {
+    padding: 1.5rem;
+  }
+  
+  .info-panel h1 {
+    font-size: 2rem;
+  }
+  
+  .info-panel h2 {
+    font-size: 1.125rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .info-panel {
+    padding: 1rem;
+  }
+  
+  .info-panel h1 {
+    font-size: 1.75rem;
+  }
+  
+  .content-section h3 {
+    font-size: 1rem;
+  }
+  
+  .content-section p {
+    font-size: 0.875rem;
+  }
+}
+
+/* Dark mode support - Matrix theme is always dark */
+.app {
+  background-color: #000;
+}
+
+.info-panel {
+  background: rgba(0, 0, 0, 0.85);
+  border: 1px solid #0F4;
+}
+
+.info-panel h1 {
+  color: #0F4;
+}
+
+.info-panel h2 {
+  color: #0A3;
+}
+
+.content-section h3 {
+  color: #0F4;
+  border-bottom-color: #0A3;
+}
+
+.content-section p {
+  color: #0C5;
+}
