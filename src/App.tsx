@@ -6,14 +6,7 @@ import SkillsPanel from './skills-panel/skills-panel';
 import LinkPanel from './link-panel/link-panel';
 
 function App() {
-  const [scrollY, setScrollY] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => setScrollY(window.scrollY);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   useEffect(() => {
     setIsVisible(true);
