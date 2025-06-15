@@ -23,15 +23,12 @@ function App() {
     <div className="min-h-screen flex items-center justify-center p-4 bg-matrix-dark relative overflow-x-hidden md:p-2">
       <MatrixBackground />
       <div
-        className={`bg-matrix-panel border border-matrix-primary rounded backdrop-blur-sm shadow-matrix p-8 max-w-[66vw] mx-auto relative z-[100] transition-all duration-1000 ease-out md:p-6 sm:p-4 text-green-600 ${
+        className={`bg-matrix-panel border border-matrix-primary rounded backdrop-blur-sm shadow-matrix p-8 sm:max-w-[66vw] max-w-[90vw] mx-auto relative z-[100] transition-all duration-1000 ease-out md:p-6 sm:p-4 text-green-600 ${
           isVisible ? 'opacity-100' : 'opacity-0'
         }`}
-        style={{
-          transform: `translateY(${scrollY * 0.5}px)`,
-        }}
       >
         <InfoHeader />
-        <div className='flex flex-row gap-8'>
+        <div className='flex flex-col sm:flex-row gap-8'>
           <div className="flex flex-4 flex-col">
             <InfoPanel />
             <SkillsPanel />
